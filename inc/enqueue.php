@@ -6,7 +6,7 @@
  */
 
 function understrap_scripts() {
-	wp_enqueue_style( 'understrap-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), '0.4.9' );
+	wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme.min.css', array(), '0.4.9' );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'understrap-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), '0.4.9', true );
 
@@ -46,7 +46,7 @@ if ( is_active_sidebar( 'hero' ) ):
 				"items"   => intval( get_theme_mod( 'understrap_theme_slider_count_setting', 1 ) )
 			);
 
-			wp_enqueue_script( "understrap-slider-script", get_stylesheet_directory_uri() . '/js/slider_settings.js', array(), '0.4.9' );
+			wp_enqueue_script( "understrap-slider-script", get_template_directory_uri() . '/js/slider_settings.js', array(), '0.4.9' );
 			wp_localize_script( "understrap-slider-script", "understrap_slider_variables", $data );
 		}
 	}
